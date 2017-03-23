@@ -66,6 +66,8 @@ public class CheeseController {
         Cheese currentCheese = CheeseData.getById(cheeseId);
         currentCheese.setName(name);
         currentCheese.setDescription(description);
+        CheeseData.remove(cheeseId);
+        CheeseData.add(currentCheese);
         return "redirect:";
     }
 
